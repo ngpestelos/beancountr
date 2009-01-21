@@ -1,0 +1,17 @@
+$def with (vendors)
+
+$var title = "Vendor List"
+
+<div id="content" class="prepend-1 span-17">
+  <ul>
+    $for vendor in vendors:
+      <li>$vendor['name']</li>
+  </ul>
+</div>
+<div id="sidebar" class="prepend-1 span-5 last">
+  <div id="vendor_options">
+    <ul>
+      <li><a href="/vendor/new">Add a Vendor</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,11 +1,13 @@
-$var title = "Vendor Form"
+$var title = "New Vendor"
 
 <div id="content">
-  <div id="form1">
-    <form action="/vendor/new" method="post">
-      <label for="vendor">Vendor</label>
+  <form action="/vendor/new" method="post">
+    <p>
+      <label for="vendor">Vendor</label><br />
       <input type="text" name="vendor" id="vendor" size="41" maxlength="41" />
-      <input type="submit" id="submit" value="Submit" />
-    </form>
-  </div>
+    </p>
+    <p>
+      <input type="submit" id="submit" value="Save" />
+    </p>
+  </form>
 </div>

@@ -1,0 +1,29 @@
+$def with (vendors)
+
+$var title="New Receipt"
+
+<div id="content">
+  <div id="receipt_form" class="prepend-1 span-7">
+    <form action="/receipt/new" method="post">
+      <p>
+        <label for="Vendor">Vendor</label><br />
+        <select id="vendor" name="vendor">
+          <option value="">Select</option>
+          $for vendor in vendors:
+          <option value="$vendor['_id']">$vendor['name']</option>
+        </select>
+      </p>
+      <p>    
+        <label for="damage">Damage</label><br />
+        <input type="text" name="damage" id="damage" size="21" maxlength="21" />
+      </p>
+      <p>
+        <label for="date">Date (YYYYMMDD)</label><br />
+        <input type="text" name="date" id="date" size="21" maxlength="21" />
+      <p>  
+      <p>
+        <input type="submit" id="submit" value="Submit" />
+      </p>
+    </form>
+  </div>
+</div>

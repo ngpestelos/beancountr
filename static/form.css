@@ -1,0 +1,26 @@
+fieldset {
+  font-size: 10px;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+fieldset p {
+  margin: 2px 0 2px 4px;
+  padding: 5px;
+}
+
+legend {
+  margin: 0;
+  padding: 5px;
+  border-style: solid;
+}
+
+label { font-weight: bold; }
+
+#content input { margin-top: 5px; }
+
+#receipt_form {
+  border: 2px solid black;
+  padding: 14px;
+}
