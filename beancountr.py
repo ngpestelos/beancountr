@@ -2,6 +2,7 @@ import web
 import vendor, receipt
 
 urls = (
+  '/latest', 'Latest',
   '/vendors', 'VendorList',
   '/vendor/new', 'NewVendor',
   '/receipt/new', 'NewReceipt',
@@ -11,6 +12,10 @@ urls = (
 render = web.template.render('static/', base='site')
 
 app = web.application(urls, globals(), autoreload=True)
+
+class Latest:
+    def GET(self):
+        return render.receipt_list(receipt.getLatest())
 
 class VendorList:
     def GET(self):
