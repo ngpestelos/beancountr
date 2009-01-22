@@ -1,0 +1,10 @@
+$def with (receipts)
+
+$var title = 'Latest Receipts'
+
+<div id="content">
+  <ul>
+    $for receipt in receipts:
+    <li>$receipt['damage'] @ $receipt['vendor']</li>
+  </ul>
+</div>
