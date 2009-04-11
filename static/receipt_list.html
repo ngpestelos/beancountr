@@ -3,8 +3,17 @@ $def with (receipts)
 $var title = 'Latest Receipts'
 
 <div id="content">
-  <ul>
-    $for receipt in receipts:
-    <li>$receipt['damage'] @ $receipt['vendor']</li>
-  </ul>
+  <table>
+    <thead>
+      <td>Date</td>
+      <td>Vendor</td>
+      <td>Damage</td>
+    </thead>
+    $for r in receipts:
+      <tr>
+        <td>$r['posted']</td>
+        <td>$r['vendor']</td>
+        <td>$r['damage']</td>
+      </tr>
+  </table>
 </div>
