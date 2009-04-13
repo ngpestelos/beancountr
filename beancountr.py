@@ -26,7 +26,7 @@ class VendorList:
 class NewVendor:
     def POST(self):
         vendor.create(web.input().vendor)
-        raise web.seeother('/')
+        raise web.seeother('/b')
 
     def GET(self):
         return render.vendor_form()
@@ -36,7 +36,7 @@ class NewReceipt:
         input = web.input()
         receipt.create(dict(vendor=input.vendor, damage=input.damage, \
           date=input.date))
-        raise web.seeother('/')
+        raise web.seeother('/b')
 
     def GET(self):
         return render.receipt_form(vendor.getAll())
