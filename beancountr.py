@@ -1,12 +1,14 @@
+#!/usr/bin/env python
+
 import web
 import vendor, receipt
 
 urls = (
-  '/latest', 'Latest',
-  '/vendors', 'VendorList',
-  '/vendor/new', 'NewVendor',
-  '/receipt/new', 'NewReceipt',
-  '/', 'NewReceipt'
+  '/b/latest', 'Latest',
+  '/b/vendors', 'VendorList',
+  '/b/vendor/new', 'NewVendor',
+  '/b/receipt/new', 'NewReceipt',
+  '/b', 'NewReceipt'
 )
 
 render = web.template.render('static/', base='site')
